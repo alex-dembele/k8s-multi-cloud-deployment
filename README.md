@@ -20,7 +20,8 @@ This repository provides a Kubernetes multi-cloud deployment setup with three en
 
 ### 1. Clone the Repository
 
-git clone https://github.com/<your-username>/k8s-multi-cloud-deployment.git
+git clone https://github.com/alex-dembele/k8s-multi-cloud-deployment.git
+
 cd k8s-multi-cloud-deployment
 
 
