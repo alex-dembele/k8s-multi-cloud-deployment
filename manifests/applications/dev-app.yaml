@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dev-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/alex-dembele/k8s-multi-cloud-deployment
+    targetRevision: main
+    path: manifests/environments/dev
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
