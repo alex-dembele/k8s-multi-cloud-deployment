@@ -98,23 +98,14 @@ Prometheus/Grafana Issues: Verify ServiceMonitors and Pod status in the environm
 
 kubectl -n <environment> get pods
 
-
 Cluster Access: Ensure kubectl contexts are correctly configured.
 
-Contributing
-
+### Contributing
 Feel free to open issues or submit pull requests to improve this project.
 
-License
-
-MIT License
 
 ### .gitignore
-
 Kubernetes
-
 *.kubeconfig
-
 Local env files
-
 .env *.local
