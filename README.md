@@ -78,20 +78,6 @@ Run apply-configs.sh for each cluster context and environment:
 
 ArgoCD will sync the same manifests across all clusters, ensuring consistency.
 
-Directory Structure
-
-k8s-multi-cloud-deployment/
-├── manifests/                # Kubernetes manifests
-│   ├── argocd/              # ArgoCD configurations
-│   ├── environments/        # Environment-specific configurations
-│   │   ├── dev/            # Dev environment manifests
-│   │   ├── staging/        # Staging environment manifests
-│   │   ├── prod/           # Prod environment manifests
-│   └── applications/        # ArgoCD application definitions
-├── scripts/                 # Helper scripts for setup and deployment
-├── README.md                # Project documentation
-└── .gitignore               # Git ignore file
-
 Environment Configurations
 **Dev: Lower resource limits (e.g., 512Mi memory for Prometheus) for development.**
 **Staging: Moderate resources to mimic production but with less scale.**
