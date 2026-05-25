@@ -66,6 +66,8 @@ Les manifests `manifests/environments/<env>/sample-app.yaml` contiennent une app
 - Remplacez les exemples de noms de repo dans `manifests/applications/*.yaml` par votre repo si besoin, ou utilisez le paramètre `repo-url` dans `apply-configs.sh`.
 - Ajoutez un gestionnaire de secrets (SealedSecrets, HashiCorp Vault, ExternalSecrets) selon votre stratégie.
 - Configurez Ingress et certificats TLS (cert-manager + issuer) pour exposer services.
+ - Installer `cert-manager` via ArgoCD (ex: `manifests/argocd/cert-manager.yaml`) puis créer un `ClusterIssuer`.
+	 Exemple fourni: `manifests/monitoring/cert-manager/cluster-issuer-staging.yaml` (Let's Encrypt staging). Remplacez `email` et configurez l'Ingress controller pour `http01`.
 
 Support & bonnes pratiques
 - Gardez les manifests immuables dans git et gérez les changements via PRs.
