@@ -76,6 +76,8 @@ chmod +x scripts/setup-clusters.sh scripts/apply-configs.sh scripts/deploy-multi
 
 If you want ArgoCD to point to a different Git repository for manifests, `apply-configs.sh` accepts an optional third parameter `repo-url` that will patch the ArgoCD Application manifests on-the-fly.
 
+For a full "bootstrap" walkthrough including cluster provisioning examples and a sample application, see `docs/bootstrap.md`.
+
 
 ### 5. Access ArgoCD
 Get the ArgoCD server URL for the cluster:
