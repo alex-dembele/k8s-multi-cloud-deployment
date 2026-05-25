@@ -46,10 +46,36 @@ chmod +x scripts/apply-configs.sh
 
 **Example: ./scripts/apply-configs.sh dev-cluster dev**
 
-Repeat for other environments:
+ Repeat for other environments:
 
 ./scripts/apply-configs.sh staging-cluster staging
 ./scripts/apply-configs.sh prod-cluster prod
+
+### Multi-Cloud Deployment
+This repository includes helper scripts to deploy the same environment across multiple cluster contexts (cloud providers).
+
+- Make the scripts executable:
+
+```bash
+chmod +x scripts/setup-clusters.sh scripts/apply-configs.sh scripts/deploy-multi-cloud.sh
+```
+
+- Configure your clusters (examples provided for AWS/GCP/Azure):
+
+```bash
+./scripts/setup-clusters.sh aws gcp azure
+# or run without args to execute the AWS example
+./scripts/setup-clusters.sh
+```
+
+- Deploy one environment to multiple clusters in one command:
+
+```bash
+./scripts/deploy-multi-cloud.sh prod aws-prod-cluster gcp-prod-cluster azure-prod-cluster
+```
+
+If you want ArgoCD to point to a different Git repository for manifests, `apply-configs.sh` accepts an optional third parameter `repo-url` that will patch the ArgoCD Application manifests on-the-fly.
+
 
 ### 5. Access ArgoCD
 Get the ArgoCD server URL for the cluster:
